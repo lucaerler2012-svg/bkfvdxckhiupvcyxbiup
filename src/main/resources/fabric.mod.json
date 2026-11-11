@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "endcrystal-autolook",
+	"version": "${version}",
+	"name": "End Crystal Auto Look",
+	"description": "Automatically looks up when placing an End Crystal on Obsidian, triggers the explosion, and restores the original view angle very quickly.",
+	"authors": [
+		"lucae"
+	],
+	"contact": {
+		"homepage": "https://github.com/",
+		"sources": "https://github.com/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/template-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.TemplateMod"
+		],
+		"client": [
+			"com.example.client.TemplateModClient"
+		]
+	},
+	"mixins": [
+		"template-mod.mixins.json",
+		{
+			"config": "template-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
